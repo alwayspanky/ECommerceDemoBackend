@@ -39,7 +39,7 @@
     
             $db = new Database();
     
-            $sql = "SELECT * FROM `cart_info` WHERE user_id='".$uId."' ";
+            $sql = "SELECT * FROM `cart_info` INNER JOIN `product_info` ON cart_info.p_id=product_info.p_id WHERE user_id='".$uId."'";
     
              //$aResult['trace']['sql'] = $sql;
     
